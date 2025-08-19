@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Custom File's Link -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive-style.css">
@@ -24,9 +26,6 @@
     <header class="header_wrapper">
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img decoding="async" src="images/logo.png" class="img-fluid" alt="logo">
-                </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,11 +61,11 @@
     <!-- Navbar section exit -->
 
     <!-- Banner section -->
-    <section id="home" class="banner_wrapper">
+    <section id="home" class="banner_wrapper" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="300">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 text-center text-md-start">
-                    <h6>HELLO WORLD</h6>
+                <div class="col-sm-12 text-center text-md-start" data-aos="fade-right" data-aos-duration="1200">
+                    <h6>HELLO</h6>
                     <h1>I’m Joe Cornita<br><span>CpE Student.</span><br>UE - Manila</h1>
                     <div class="mt-4">
                         <a class="main-btn" href="resume/resume.docx">Download CV</a>
@@ -81,32 +80,27 @@
     <section id="about" class="about_wrapper">
         <div class="container">
             <div class="row justify-content-between align-items-center">
-                <div class="col-lg-5 mb-4 mb-lg-0">
-                    <img decoding="async" src="images/about.jpg" class="img-fluid rounded-3" alt="About Us">
+                <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                    <img decoding="async" src="images/about me.png" class="img-fluid rounded-2" alt="About Us">
                 </div>
-                <div class="col-lg-7 ps-lg-5 text-center text-lg-start">
+                <div class="col-lg-7 ps-lg-5 text-center text-lg-start" data-aos="fade-left" data-aos-duration="1000">
                     <div class="my-3 my-lg-0">
                         <span class="subtitle">My About Details</span>
                         <h2>About Me</h2>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                            suffered in some form, by injected humour.</p>
+                        <p>I’m Joezer, an aspiring professional with a passion for photography, videography, and coding. 
+                        I enjoy combining creativity and technical skills to bring ideas to life through visuals and technology.</p>
                     </div>
                     <div class="pt-4">
                         <ul class="nav nav-pills justify-content-center justify-content-lg-between mb-3" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="pills-skill-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-skill" type="button" role="tab" aria-controls="pills-skill"
-                                    aria-selected="true">Main Skills</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-Award-tab" data-bs-toggle="pill"
+                                <button class="nav-link active" id="pills-Award-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-Award" type="button" role="tab" aria-controls="pills-Award"
-                                    aria-selected="false">Awards</button>
+                                    aria-selected="true">Awards</button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="pills-experiance-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-experiance" type="button" role="tab"
-                                    aria-controls="pills-experiance" aria-selected="false">Experiance</button>
+                                    aria-controls="pills-experiance" aria-selected="false">Experience</button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="pills-education-tab" data-bs-toggle="pill"
@@ -115,101 +109,53 @@
                             </li>
                         </ul>
                         <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-skill" role="tabpanel"
-                                aria-labelledby="pills-skill-tab">
-                                <div class="single-progress">
-                                    <h6>Designing</h6>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 95%"
-                                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                                        </div>
-                                    </div>
-                                    <span class="label">95%</span>
-                                </div>
-                                <div class="single-progress">
-                                    <h6>Managment</h6>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 85%"
-                                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                                        </div>
-                                    </div>
-                                    <span class="label">85%</span>
-                                </div>
-                                <div class="single-progress">
-                                    <h6>Marketing</h6>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 75%"
-                                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                                        </div>
-                                    </div>
-                                    <span class="label">75%</span>
-                                </div>
-                                <div class="single-progress">
-                                    <h6>Development</h6>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 80%"
-                                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                                        </div>
-                                    </div>
-                                    <span class="label">80%</span>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="pills-Award" role="tabpanel"
+                            <div class="tab-pane fade show active" id="pills-Award" role="tabpanel"
                                 aria-labelledby="pills-Award-tab">
                                 <ul class="text-start ps-0">
-                                    <li><a href="#">Awwwards.com
-                                            <span>- Winner</span></a> 2019 - 2020
-                                    </li>
-                                    <li><a href="#">CSS Design Awards
-                                            <span>- Winner</span></a> 2017 - 2018
-                                    </li>
-                                    <li><a href="#">Design nominees
-                                            <span>- site of the
-                                                day</span></a> 2013- 2014
-                                    </li>
-                                    <li><a href="#">Awwwards.com
-                                            <span>- Winner</span></a> 2019 - 2020
-                                    </li>
+                                    <li><a href="#"><strong>The Developer's Cookbook: Git & Github</strong><br><span>
+                                        2nd Year</span>
+                                    </a> 2025</li>
+                                    <li><a href="#"><strong>Figma 101 Workshop</strong><br><span>
+                                        2nd Year</span>
+                                    </a> 2025</li>
+                                    <li><a href="#"><strong>Best in Python Game Application</strong><span> - Winner
+                                    </span><br><span>
+                                        1st Year</span>
+                                    </a> 2024</li>
+                                    <li><a href="#"><strong>Code Crash: Python Programming Challenge</strong><br><span>
+                                        1st Year</span>
+                                    </a> 2024</li>
                                 </ul>
                             </div>
                             <div class="tab-pane fade" id="pills-experiance" role="tabpanel"
                                 aria-labelledby="pills-experiance-tab">
                                 <ul class="text-start ps-0">
-                                    <li><a href="#">Sr. Front-end
-                                            Engineer<span> -
-                                                Google</span></a> 2018 - Current
-                                    </li>
-                                    <li><a href="#">Front-end
-                                            Engineer<span> -
-                                                Microsoft</span></a> 2017 - 2018
-                                    </li>
-                                    <li><a href="#">Software
-                                            Engineer<span> - Alibaba
-                                            </span></a> 2013- 2014</li>
-                                    <li><a href="#">Software
-                                            Engineer<span> - Alibaba
-                                            </span></a> 2013- 2014</li>
+                                    <li><a href="#"><strong>VP for Media</strong><br><span>
+                                        Society of Computer Engineering Students</span>
+                                    </a> 2023 - Current</li>
+                                    <li><a href="#"><strong>Media</strong><br><span>
+                                        UE ARMS</span>
+                                    </a>Current</li>
+                                    <li><a href="#"><strong>Media</strong><br><span>
+                                        UE Jam Session</span>
+                                    </a> 2023 - 2024</li>
                                 </ul>
                             </div>
                             <div class="tab-pane fade" id="pills-education" role="tabpanel"
                                 aria-labelledby="pills-education-tab">
                                 <ul class="text-start ps-0">
-                                    <li><a href="#">BSc In CSE<span>
-                                                - ABC University, Los
-                                                Angeles, CA</span></a> 2010
+                                    <li><a href="#"><strong>University of the East</strong> - College<br><span>
+                                        Sampaloc, Manila</span></a> 2023 - Current
                                     </li>
-                                    <li><a href="#">Diploma in
-                                            Computer Science<span> - Gamma
-                                                Technical
-                                                Institute</span></a> 2009
+                                    <li><a href="#"><strong>Our Lady of Fatima University</strong> - Senior High<br><span>
+                                        Antipolo City, Rizal</span></a> 2021 - 2023
                                     </li>
-                                    <li><a href="#">Graphic
-                                            Designer<span> - ABC Institute,
-                                                Los Angeles, CA</span></a> 2007
+                                    <li><a href="#"><strong>Prince of Peace Integrated School</strong> - Junior High<br><span>
+                                        Antipolo City, Rizal</span></a> 2020 - 2021
                                     </li>
-                                    <li><a href="#">Graphic
-                                            Designer<span> - ABC Institute,
-                                                Los Angeles, CA</span></a> 2007
+                                         <li><a href="#"><strong>Jesus Lord & Savior
+                                          Christian Colleges Foundation</strong> - Elementary<br><span>
+                                                  Sta. Maria, Bulacan</span></a> 2009 - 2016
                                     </li>
                                 </ul>
                             </div>
@@ -229,8 +175,8 @@
                 <div class="col-sm-12 text-center mb-4">
                     <span class="subtitle">What I can do for you</span>
                     <h2>My Awesome Service</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available,<br class="d-none d-md-block">
-                        but the majority have suffered alteration.</p>
+                    <p>Here are the creative and technical services I provide, 
+                        <br>designed to deliver quality results and bring your vision to life.</p>
                 </div>
             </div>
             <div class="row">
@@ -261,34 +207,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card">
-                        <div class="card-body text-md-start text-center">
-                            <img decoding="async" src="./images/service/service-3.svg" alt="service" class="img-fluid mb-4">
-                            <h3>Mobile App Development</h3>
-                            <p>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card">
-                        <div class="card-body text-md-start text-center">
-                            <img decoding="async" src="./images/service/service-4.svg" alt="service" class="img-fluid mb-4">
-                            <h3>Marketing & Reporting</h3>
-                            <p>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card">
-                        <div class="card-body text-md-start text-center">
-                            <img decoding="async" src="./images/service/service-3.svg" alt="service" class="img-fluid mb-4">
-                            <h3>Mobile App Development</h3>
-                            <p>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -438,8 +356,10 @@
 
     <!-- Custom Js Link -->
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>
-
-
