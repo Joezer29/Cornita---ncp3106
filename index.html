@@ -33,7 +33,7 @@
                     <i class="fas fa-stream navbar-toggler-icon"></i>
                 </button>
 
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav menu-navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#home">Home</a>
@@ -50,9 +50,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">Contact</a>
                         </li>
-                        <li class="nav-item mt-3 mt-lg-0">
-                            <a class="main-btn" href="#contact">Hire Me</a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -66,9 +63,9 @@
             <div class="row">
                 <div class="col-sm-12 text-center text-md-start" data-aos="fade-right" data-aos-duration="1200">
                     <h6>HELLO</h6>
-                    <h1>I’m Joe Cornita<br><span>CpE Student.</span><br>UE - Manila</h1>
+                    <h1>I'm Joe Cornita<br><span>CpE Student.</span><br><span class="university">UE Manila</span></h1>
                     <div class="mt-4">
-                        <a class="main-btn" href="resume/resume.docx">Download CV</a>
+                        <a class="main-btn" href="resume/resume.pdf" download="Cornita_J_Resume.pdf">Download CV</a>
                     </div>
                 </div>
             </div>
@@ -91,26 +88,15 @@
                         I enjoy combining creativity and technical skills to bring ideas to life through visuals and technology.</p>
                     </div>
                     <div class="pt-4">
-                        <ul class="nav nav-pills justify-content-center justify-content-lg-between mb-3" id="pills-tab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="pills-Award-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-Award" type="button" role="tab" aria-controls="pills-Award"
-                                    aria-selected="true">Awards</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-experiance-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-experiance" type="button" role="tab"
-                                    aria-controls="pills-experiance" aria-selected="false">Experience</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-education-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-education" type="button" role="tab"
-                                    aria-controls="pills-education" aria-selected="false">Education</button>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-Award" role="tabpanel"
-                                aria-labelledby="pills-Award-tab">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-awards-tab" data-bs-toggle="tab" data-bs-target="#nav-awards" type="button" role="tab" aria-controls="nav-awards" aria-selected="true">Awards</button>
+                                <button class="nav-link" id="nav-experience-tab" data-bs-toggle="tab" data-bs-target="#nav-experience" type="button" role="tab" aria-controls="nav-experience" aria-selected="false">Experience</button>
+                                <button class="nav-link" id="nav-education-tab" data-bs-toggle="tab" data-bs-target="#nav-education" type="button" role="tab" aria-controls="nav-education" aria-selected="false">Education</button>
+                            </div>
+                        </nav>
+                        <div class="tab-content text-white" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-awards" role="tabpanel" aria-labelledby="nav-awards-tab">
                                 <ul class="text-start ps-0">
                                     <li><a href="#"><strong>The Developer's Cookbook: Git & Github</strong><br><span>
                                         2nd Year</span>
@@ -127,8 +113,7 @@
                                     </a> 2024</li>
                                 </ul>
                             </div>
-                            <div class="tab-pane fade" id="pills-experiance" role="tabpanel"
-                                aria-labelledby="pills-experiance-tab">
+                            <div class="tab-pane fade" id="nav-experience" role="tabpanel" aria-labelledby="nav-experience-tab">
                                 <ul class="text-start ps-0">
                                     <li><a href="#"><strong>VP for Media</strong><br><span>
                                         Society of Computer Engineering Students</span>
@@ -141,8 +126,7 @@
                                     </a> 2023 - 2024</li>
                                 </ul>
                             </div>
-                            <div class="tab-pane fade" id="pills-education" role="tabpanel"
-                                aria-labelledby="pills-education-tab">
+                            <div class="tab-pane fade" id="nav-education" role="tabpanel" aria-labelledby="nav-education-tab">
                                 <ul class="text-start ps-0">
                                     <li><a href="#"><strong>University of the East</strong> - College<br><span>
                                         Sampaloc, Manila</span></a> 2023 - Current
@@ -179,29 +163,29 @@
                         <br>designed to deliver quality results and bring your vision to life.</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
+            <div class="row justify-content-center g-2">
+                <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <div class="card-body text-md-start text-center">
-                            <img decoding="async" src="./images/service/service-1.svg" alt="service" class="img-fluid mb-4">
+                            <img decoding="async" src="./images/service/service-1.svg" alt="service" class="img-fluid mb-2">
                             <h3>Business Stratagy</h3>
                             <p>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <div class="card-body text-md-start text-center">
-                            <img decoding="async" src="./images/service/service-2.svg" alt="service" class="img-fluid mb-4">
+                            <img decoding="async" src="./images/service/service-2.svg" alt="service" class="img-fluid mb-2">
                             <h3>Website Development</h3>
                             <p>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <div class="card-body text-md-start text-center">
-                            <img decoding="async" src="./images/service/service-3.svg" alt="service" class="img-fluid mb-4">
+                            <img decoding="async" src="./images/service/service-3.svg" alt="service" class="img-fluid mb-2">
                             <h3>Marketing & Reporting</h3>
                             <p>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.</p>
                         </div>

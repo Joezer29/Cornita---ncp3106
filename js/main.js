@@ -1,12 +1,15 @@
-// Header Scroll
+// Header Scroll (keep navbar visible, apply blur/shrink on scroll)
 let nav = document.querySelector(".navbar");
-window.onscroll = function () {
-    if(document.documentElement.scrollTop > 20){
+
+window.addEventListener("scroll", function () {
+    const currentScroll = window.pageYOffset;
+
+    if (document.documentElement.scrollTop > 20 || currentScroll > 20) {
         nav.classList.add("header-scrolled");
-    }else{
+    } else {
         nav.classList.remove("header-scrolled");
     }
-} 
+});
 
 // nav hide 
 let navBar = document.querySelectorAll(".nav-link");

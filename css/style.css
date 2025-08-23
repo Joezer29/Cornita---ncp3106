@@ -115,6 +115,15 @@ h1 span {
     color: var(--primary-color);
 }
 
+h1 .university {
+    color: var(--text-gray);
+    font-size: 0.6em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
 h2 {
     font-size: 50px;
     line-height: 1.3;
@@ -173,9 +182,9 @@ button {
 /* 2 Navbar */
 .header_wrapper .navbar {
     padding:15px 0;
-    -webkit-transition: all .2s linear;
-    -o-transition: all .2s linear;
-    transition: all .2s linear;
+    -webkit-transition: background-color .3s ease, box-shadow .3s ease, padding .3s ease, transform .3s ease;
+    -o-transition: background-color .3s ease, box-shadow .3s ease, padding .3s ease, transform .3s ease;
+    transition: background-color .3s ease, box-shadow .3s ease, padding .3s ease, transform .3s ease;
 }
 
 .header_wrapper .navbar-brand img {
@@ -231,9 +240,17 @@ button {
     top: 0;
     left: 0;
     width: 100%; 
-    background-color: var(--bg-dark-blue);
-    -webkit-box-shadow: 0 4px 6px 0 rgba(12, 0, 46, .05);
-    box-shadow: 0 4px 6px 0 rgba(12, 0, 46, .05);
+    background-color: rgba(9, 16, 32, 0.6);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    -webkit-box-shadow: 0 4px 10px 0 rgba(12, 0, 46, .1);
+    box-shadow: 0 4px 10px 0 rgba(12, 0, 46, .1);
+    padding: 8px 0;
+}
+
+/* Hide navbar while scrolling down */
+.navbar.nav-hide {
+    transform: translateY(-100%);
 }
 
 .header-scrolled .nav-item .nav-link.active,
@@ -271,38 +288,186 @@ button {
 
 /* 4 About */
 .about_wrapper {
-    height: 700px;
+    height: 750px;
     overflow: hidden;
+}
+
+.about_wrapper .tab-pane li strong {
+    color: var(--text-white);
+}
+
+/* Nav tabs styling */
+.about_wrapper .nav-tabs {
+    border-bottom: none;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.about_wrapper .nav-tabs .nav-link {
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    color: var(--text-gray);
+    padding: 12px 22px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    position: relative;
+}
+
+.about_wrapper .nav-tabs .nav-link:hover {
+    background-color: rgba(255,255,255,0.05);
+    color: var(--text-white);
+}
+
+.about_wrapper .nav-tabs .nav-link.active {
+    background-color: var(--bg-dark-blue);
+    border-color: rgba(255,255,255,0.08);
+    border-bottom-color: transparent;
+    color: var(--text-white);
+    box-shadow: none;
+    z-index: 2;
+    margin-bottom: -1px;
 }
 
 .about_wrapper .tab-content {
     height: 400px;
     overflow: hidden;
+    background-color: #091020;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-top: none;
+    border-radius: 0 8px 8px 8px;
+    padding: 24px 16px 16px;
+    margin-top: 0;
+    box-shadow: none;
+    color: var(#fff);
+    transition: all 0.3s ease;
 }
 
 .about_wrapper .tab-pane {
     height: 100%;
     overflow: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.about_wrapper .tab-pane.fade {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.about_wrapper .tab-pane.fade.show.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive nav tabs */
+@media (max-width: 991px) {
+    .about_wrapper {
+      height: auto;   /* let it expand naturally */
+      overflow: visible; /* show all content */
+    }
+    
+    .about_wrapper .nav-tabs {
+        flex-direction: column;
+        gap: 8px;
+        border-bottom: none;
+    }
+    
+    .about_wrapper .nav-tabs .nav-link {
+        border-radius: 8px;
+        text-align: center;
+        padding: 10px 16px;
+        font-size: 14px;
+        border: 1px solid rgba(255,255,255,0.1);
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    
+    .about_wrapper .nav-tabs .nav-link.active {
+        border-bottom-color: var(--primary-color);
+        margin-bottom: 0;
+    }
+    
+    .about_wrapper .tab-content {
+        border-radius: 12px;
+        padding: 20px 16px;
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 575px) {
+    .about_wrapper .nav-tabs .nav-link {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .about_wrapper .tab-content {
+        padding: 16px 12px;
+    }
 }
 
 .about_wrapper ul.nav-pills {
-    border: 1px solid var(--gray-color);
-    border-radius: 70px;
+    position: relative;
+    border: 0;
+    border-radius: 0;
+    padding: 0 6px;
+    box-shadow: none;
+    margin-bottom: 0 !important;
+    gap: 16px;
 }
 
 .about_wrapper ul li .nav-link {
-    border-radius: 50px;
+    position: relative;
+    border-radius: 12px 12px 0 0;
     font-size: 15px;
     font-weight: 500;
-    transition: all 0.45s cubic-bezier(0, 0, 0.2, 1);
-    display: inline-block;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: var(--text-gray);
-    border: 0;
-    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.18);
+    border-bottom: none;
+    background: transparent;
+    padding: 12px 22px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about_wrapper ul li .nav-link:hover {
+    background-color: rgba(255,255,255,0.05);
+    color: var(--text-white);
 }
 
 .about_wrapper ul li .nav-link.active {
-    background-color: var(--primary-color);
+    background-color: rgba(255,255,255,0.06);
+    color: var(--text-white);
+    border-color: rgba(255,255,255,0.18);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    z-index: 2;
+}
+
+/* bridge the active tab into the content panel */
+.about_wrapper ul li .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: calc(100% - 20px);
+    height: 16px;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    z-index: 2;
+}
+
+/* Smooth, dynamic tab content transition */
+.about_wrapper .tab-content .tab-pane {
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    transform: translateY(12px);
+}
+
+.about_wrapper .tab-content .tab-pane.show.active {
+    transform: translateY(0);
 }
 
 .about_wrapper .single-progress {
@@ -362,6 +527,14 @@ button {
     box-shadow: 0px 2px 70px 0px rgb(253 71 102 / 5%);
     transform: translateY(-5px);
 }
+
+.services_wrapper .row {
+    display: flex;
+    justify-content: center;  /* centers horizontally */
+    align-items: center;      /* centers vertically (optional) */
+    flex-wrap: wrap;          /* allows wrapping on smaller screens */
+    gap: 5px;                /* spacing between cards */
+  }
 
 /* 5 Portfolio */
 .portfolio_wrapper .card {
