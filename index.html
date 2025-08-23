@@ -155,7 +155,7 @@
     <!-- Services section -->
     <section id="services" class="services_wrapper">
         <div class="container">
-            <div class="row">
+            <div class="row" data-aos="zoom-in-down" data-aos-duration="1000">
                 <div class="col-sm-12 text-center mb-4">
                     <span class="subtitle">What I can do for you</span>
                     <h2>My Awesome Service</h2>
@@ -163,31 +163,56 @@
                         <br>designed to deliver quality results and bring your vision to life.</p>
                 </div>
             </div>
-            <div class="row justify-content-center g-2">
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <div class="card-body text-md-start text-center">
-                            <img decoding="async" src="./images/service/service-1.svg" alt="service" class="img-fluid mb-2">
-                            <h3>Business Stratagy</h3>
-                            <p>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.</p>
+            <div class="row justify-content-center g-2"> 
+                <div class="col-lg-3 col-md-6"> 
+                    <div class="card photography-card" data-aos="zoom-in-left" data-aos-duration="1000"> 
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center text-center"> 
+                            <!-- Hidden icons that appear on hover -->
+                            <div class="service-icons">
+                                <img src="images/icons/lightroom.png" alt="Gallery" class="service-icon" />
+                                <img src="images/icons/illustrator.png" alt="Camera" class="service-icon" />
+                            </div>
+                            <!-- Regular content -->
+                            <div class="card-content">
+                                <h3>Photography</h3> 
+                                <p>Stunning shots that tell your story.</p> 
+                            </div> 
+                        </div> 
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card development-card" data-aos="zoom-in-up" data-aos-duration="1000">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                            <!-- Hidden icons that appear on hover -->
+                            <div class="service-icons">
+                                <img src="images/icons/python.png" alt="Code" class="service-icon" />
+                                <img src="images/icons/java.png" alt="App" class="service-icon" />
+                                <img src="images/icons/Kotlin.png" alt="App" class="service-icon" />
+                                <img src="images/icons/html.png" alt="App" class="service-icon" />
+                                <img src="images/icons/database.png" alt="App" class="service-icon" />
+                                <img src="images/icons/c-.png" alt="App" class="service-icon" />
+                            </div>
+                            <!-- Regular content -->
+                            <div class="card-content">
+                                <h3>Software Development</h3>
+                                <p>Smart apps, <br>built to perform.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <div class="card-body text-md-start text-center">
-                            <img decoding="async" src="./images/service/service-2.svg" alt="service" class="img-fluid mb-2">
-                            <h3>Website Development</h3>
-                            <p>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <div class="card-body text-md-start text-center">
-                            <img decoding="async" src="./images/service/service-3.svg" alt="service" class="img-fluid mb-2">
-                            <h3>Marketing & Reporting</h3>
-                            <p>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.</p>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card videography-card" data-aos="zoom-in-right" data-aos-duration="1000">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                            <!-- Hidden icons that appear on hover -->
+                            <div class="service-icons">
+                                <img src="images/icons/premiere-pro.png" alt="Film" class="service-icon" />
+                                <img src="images/icons/davinci.png" alt="Play" class="service-icon" />
+                            </div>
+                            <!-- Regular content -->
+                            <div class="card-content">
+                                <h3>Videography</h3>
+                                <p>Cinematic videos made to inspire.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
