@@ -42,6 +42,46 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // Scroll spy functionality
+    function updateActiveNavLink() {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link[href^="#"]');
+        
+        let current = '';
+        const scrollPosition = window.pageYOffset + 100; // Offset for navbar height
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            
+            // Skip footer section to avoid conflicts with contact
+            if (sectionId === 'footer') return;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                current = sectionId;
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            const linkHref = link.getAttribute('href');
+            
+            // Handle contact section specifically
+            if (current === 'contact' && linkHref === '#contact') {
+                link.classList.add('active');
+            } else if (linkHref === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    }
+    
+    // Update active link on scroll
+    window.addEventListener('scroll', updateActiveNavLink);
+    
+    // Initial call to set active link on page load
+    updateActiveNavLink();
 });
  
 
