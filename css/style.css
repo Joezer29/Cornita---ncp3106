@@ -562,7 +562,7 @@ button {
 
   @media (max-width: 767px) {
     .services_wrapper .card {
-        margin-left: 145px;
+        margin-left: 120px;
         margin-right: 0;
         margin-bottom: 20px; /* Add space between stacked cards */
     }
