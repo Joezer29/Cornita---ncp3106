@@ -752,13 +752,38 @@ button {
 }
 
 .portfolio-modal .tech-tag {
-    background: rgba(253, 71, 102, 0.1);
-    color: var(--primary-color);
     padding: 6px 12px;
-    border-radius: 15px;
+    border-radius: 16px;
     font-size: 12px;
-    font-weight: 500;
-    border: 1px solid rgba(253, 71, 102, 0.2);
+    font-weight: 600;
+    letter-spacing: .2px;
+    border: 1px solid transparent;
+    background: rgba(255,255,255,0.06);
+}
+
+/* Multi-accent tag variants */
+.portfolio-modal .tech-tag.html { color: #E44D26; background: rgba(228,77,38,0.12); border-color: rgba(228,77,38,0.28); }
+.portfolio-modal .tech-tag.css { color: #1572B6; background: rgba(21,114,182,0.12); border-color: rgba(21,114,182,0.28); }
+.portfolio-modal .tech-tag.javascript { color: #F7DF1E; background: rgba(247,223,30,0.12); border-color: rgba(247,223,30,0.35); }
+.portfolio-modal .tech-tag.bootstrap { color: #7952B3; background: rgba(121,82,179,0.12); border-color: rgba(121,82,179,0.28); }
+.portfolio-modal .tech-tag.python { color: #3776AB; background: rgba(55,118,171,0.12); border-color: rgba(55,118,171,0.28); }
+.portfolio-modal .tech-tag.tkinter { color: #FF6F00; background: rgba(255,111,0,0.12); border-color: rgba(255,111,0,0.28); }
+.portfolio-modal .tech-tag[data-tag="Game Logic"],
+.portfolio-modal .tech-tag.game { color: #00C853; background: rgba(0,200,83,0.12); border-color: rgba(0,200,83,0.28); }
+.portfolio-modal .tech-tag.gui { color: #00ACC1; background: rgba(0,172,193,0.12); border-color: rgba(0,172,193,0.28); }
+.portfolio-modal .tech-tag.java { color: #EA2D2E; background: rgba(234,45,46,0.12); border-color: rgba(234,45,46,0.28); }
+.portfolio-modal .tech-tag.javafx { color: #1478FF; background: rgba(20,120,255,0.12); border-color: rgba(20,120,255,0.28); }
+.portfolio-modal .tech-tag.oop { color: #FF4081; background: rgba(255,64,129,0.12); border-color: rgba(255,64,129,0.28); }
+.portfolio-modal .tech-tag.classes { color: #26C6DA; background: rgba(38,198,218,0.12); border-color: rgba(38,198,218,0.28); }
+.portfolio-modal .tech-tag.inheritance { color: #AB47BC; background: rgba(171,71,188,0.12); border-color: rgba(171,71,188,0.28); }
+
+/* Responsive tags */
+@media (max-width: 767px) {
+    .portfolio-modal .tech-tag { font-size: 11px; padding: 5px 10px; }
+}
+@media (max-width: 575px) {
+    .portfolio-modal .tech-stack { gap: 6px; }
+    .portfolio-modal .tech-tag { font-size: 10px; padding: 4px 8px; }
 }
 
 .portfolio-modal .modal-footer {
@@ -811,23 +836,32 @@ button {
     width: 100%;
 }
 
-.portfolio-modal .carousel-item.active,
-.portfolio-modal .carousel-item-next,
-.portfolio-modal .carousel-item-prev {
+.portfolio-modal .carousel .carousel-item {
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    opacity: 0;
+}
+
+.portfolio-modal .carousel .carousel-item.active {
+    opacity: 1;
+}
+
+/* Make upcoming/previous slides partially visible for a smoother feel */
+.portfolio-modal .carousel .carousel-item-next,
+.portfolio-modal .carousel .carousel-item-prev {
     display: block;
+    opacity: 0.4;
 }
 
-.portfolio-modal .carousel-item-next:not(.carousel-item-start),
-.portfolio-modal .carousel-item-prev:not(.carousel-item-end) {
-    transform: translateX(0);
+/* While sliding, increase visibility */
+.portfolio-modal .carousel .carousel-item-next.carousel-item-start,
+.portfolio-modal .carousel .carousel-item-prev.carousel-item-end {
+    opacity: 0.7;
 }
 
-.portfolio-modal .carousel-item-next.carousel-item-start {
-    transform: translateX(100%);
-}
-
-.portfolio-modal .carousel-item-prev.carousel-item-end {
-    transform: translateX(-100%);
+/* Active slide during motion slightly fades */
+.portfolio-modal .carousel .carousel-item.active.carousel-item-start,
+.portfolio-modal .carousel .carousel-item.active.carousel-item-end {
+    opacity: 0.7;
 }
 
    /* Carousel Controls */
@@ -1003,27 +1037,15 @@ button {
     }
 }
 
-/* Ensure all modal carousels use slide transitions only */
+/* Ensure smooth slide + fade transitions */
 .portfolio-modal .modal-carousel {
-    transition: transform 0.6s ease; /* Smooth out the slide transition */
+    transition: transform 0.6s ease;
 }
-/* Remove any fade effects */
+
 .portfolio-modal .carousel-item {
-    transition: transform 0.6s ease; /* Smooth transition for sliding */
+    transition: transform 0.6s ease, opacity 0.6s ease;
 }
-/* Ensure that the carousel does not use fade effects */
-.portfolio-modal .carousel-item-next,
-.portfolio-modal .carousel-item-prev,
-.portfolio-modal .carousel-item.active {
-    display: block; /* Ensure items are displayed correctly */
-}
-/* Hide the items that are not active */
-.portfolio-modal .carousel-item {
-    display: none; /* Hide all items by default */
-}
-.portfolio-modal .carousel-item.active {
-    display: block; /* Show only the active item */
-}
+
 /* Adjust the carousel controls for better visibility */
 .portfolio-modal .carousel-control-prev,
 .portfolio-modal .carousel-control-next {
