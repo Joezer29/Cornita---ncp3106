@@ -722,7 +722,7 @@ button {
 }
 
 .portfolio-modal .modal-body {
-    padding: 25px;
+    padding: 20px; /* Reduced padding */
 }
 
 .portfolio-modal .modal-img {
@@ -734,27 +734,28 @@ button {
 .portfolio-modal h6 {
     color: var(--primary-color);
     font-weight: 600;
-    margin-bottom: 10px;
-    margin-top: 20px;
+    margin-bottom: 8px; /* Reduced margin */
+    margin-top: 15px; /* Reduced margin */
 }
 
 .portfolio-modal p {
     color: var(--text-gray);
-    line-height: 1.6;
-    margin-bottom: 20px;
+    line-height: 1.5; /* Slightly reduced line height */
+    font-size: 15px; /* Slightly reduced font size */
+    margin-bottom: 15px; /* Reduced margin */
 }
 
 .portfolio-modal .tech-stack {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 15px;
+    gap: 6px; /* Reduced gap */
+    margin-top: 12px; /* Reduced margin */
 }
 
 .portfolio-modal .tech-tag {
-    padding: 6px 12px;
-    border-radius: 16px;
-    font-size: 12px;
+    padding: 5px 10px; /* Reduced padding */
+    border-radius: 14px; /* Slightly smaller border radius */
+    font-size: 11px; /* Slightly reduced font size */
     font-weight: 600;
     letter-spacing: .2px;
     border: 1px solid transparent;
@@ -788,14 +789,15 @@ button {
 
 .portfolio-modal .modal-footer {
     border-top: 1px solid rgba(255,255,255,0.1);
-    padding: 20px 25px;
+    padding: 15px 20px; /* Reduced padding */
 }
 
 .portfolio-modal .btn {
-    border-radius: 25px;
-    padding: 8px 20px;
+    border-radius: 20px; /* Slightly smaller border radius */
+    padding: 6px 16px; /* Reduced padding */
     font-weight: 500;
     transition: all 0.3s ease;
+    font-size: 13px; /* Slightly reduced font size */
 }
 
 .portfolio-modal .btn-primary {
@@ -823,16 +825,16 @@ button {
 
 /* Enhanced Modal Carousel Styling */
 .portfolio-modal .modal-carousel {
-    border-radius: 12px;
+    border-radius: 10px; /* Slightly smaller border radius */
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     background: var(--bg-dark-blue);
     position: relative;
 }
 
 .portfolio-modal .modal-carousel-img {
     height: auto;
-    max-height: 400px; /* Optional: Set a max-height if you don't want images to be too tall */
+    max-height: 300px; /* Further reduced max-height for images */
     object-fit: contain;
     width: 100%;
 }
@@ -845,7 +847,7 @@ button {
 }
 
 .portfolio-modal .carousel .carousel-item {
-    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Slightly faster transition */
     opacity: 0;
 }
 
@@ -857,76 +859,76 @@ button {
 .portfolio-modal .carousel .carousel-item-next,
 .portfolio-modal .carousel .carousel-item-prev {
     display: block;
-    opacity: 0.4;
+    opacity: 0.3; /* Slightly reduced opacity */
 }
 
 /* While sliding, increase visibility */
 .portfolio-modal .carousel .carousel-item-next.carousel-item-start,
 .portfolio-modal .carousel .carousel-item-prev.carousel-item-end {
-    opacity: 0.7;
+    opacity: 0.6; /* Slightly reduced opacity */
 }
 
 /* Active slide during motion slightly fades */
 .portfolio-modal .carousel .carousel-item.active.carousel-item-start,
 .portfolio-modal .carousel .carousel-item.active.carousel-item-end {
-    opacity: 0.7;
+    opacity: 0.6; /* Slightly reduced opacity */
 }
 
    /* Carousel Controls */
    .portfolio-modal .carousel-control-prev,
    .portfolio-modal .carousel-control-next {
-       width: 50px;
-       height: 50px;
-       background: rgba(0,0,0,0.5);
+       width: 40px; /* Reduced size */
+       height: 40px; /* Reduced size */
+       background: rgba(0,0,0,0.4); /* Slightly lighter background */
        top: 50%;
        transform: translateY(-50%);
-       margin: 0 15px;
+       margin: 0 10px; /* Reduced margin */
        transition: background 0.3s ease; /* Smooth background transition */
    }
 
    .portfolio-modal .carousel-control-prev:hover,
    .portfolio-modal .carousel-control-next:hover {
-       background: rgba(253, 71, 102, 0.8);
+       background: rgba(253, 71, 102, 0.7); /* Slightly lighter hover background */
        border-color: var(--primary-color);
-       transform: translateY(-50%) scale(1.1);
+       transform: translateY(-50%) scale(1.05); /* Slightly smaller scale */
    }
 
    /* Carousel Indicators */
    .portfolio-modal .carousel-indicators {
-       bottom: 15px;
+       bottom: 10px; /* Adjusted position */
        margin-bottom: 0;
    }
 
    .portfolio-modal .carousel-indicators button {
-       width: 8px;
-       height: 8px;
-       border-radius: 80%;
-       background: rgba(255,255,255,0.3);
-       border: 2px solid rgba(255,255,255,0.5);
-       margin: 0 4px;
+       width: 6px; /* Reduced size */
+       height: 6px; /* Reduced size */
+       border-radius: 50%; /* Changed to perfect circle */
+       background: rgba(255,255,255,0.2); /* Slightly lighter background */
+       border: 1px solid rgba(255,255,255,0.4); /* Reduced border */
+       margin: 0 3px; /* Reduced margin */
        transition: all 0.3s ease-in-out;
    }
 
    .portfolio-modal .carousel-indicators button.active {
        background: var(--primary-color);
        border-color: var(--primary-color);
-       transform: scale(1.2);
+       transform: scale(1.1); /* Slightly smaller scale */
    }
 
    .portfolio-modal .carousel-indicators button:hover {
-       background: rgba(253, 71, 102, 0.6);
+       background: rgba(253, 71, 102, 0.5); /* Slightly lighter hover background */
        border-color: var(--primary-color);
-       transform: scale(1.1);
+       transform: scale(1.05); /* Slightly smaller scale */
    }
    
 
 /* Carousel Captions */
 .portfolio-modal .carousel-caption {
-    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    background: linear-gradient(transparent, rgba(0,0,0,0.6)); /* Slightly lighter gradient */
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 20px 15px 15px;
+    padding: 15px 10px 10px; /* Reduced padding */
     text-align: left;
 }
 
@@ -934,8 +936,8 @@ button {
     color: var(--text-white);
     font-weight: 600;
     margin: 0;
-    font-size: 14px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    font-size: 13px; /* Slightly reduced font size */
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4); /* Slightly smaller shadow */
 }
 
 
@@ -1500,11 +1502,11 @@ button {
 
 /* Custom Portrait Modal Layout for specific projects */
 .portrait-modal-layout .modal-dialog {
-    max-width: 900px; /* Adjust for a wider modal overall */
+    max-width: 750px; /* Reduced max-width for portrait modal */
 }
 
 .portrait-modal-layout .modal-body {
-    padding: 25px;
+    padding: 20px; /* Adjusted padding */
 }
 
 .portrait-modal-layout .modal-body > .row {
@@ -1515,13 +1517,13 @@ button {
 
 .portrait-modal-layout .modal-body .carousel-container {
     width: 100%; /* Take full width of its column */
-    max-width: 300px; /* Max width for portrait orientation */
+    max-width: 250px; /* Further reduced max-width for portrait orientation */
     margin: 0 auto; /* Center the carousel in its column */
     order: 1; /* Carousel first on mobile */
 }
 
 .portrait-modal-layout .modal-body .modal-details-content {
-    padding-left: 20px; /* Space between carousel and details */
+    padding-left: 15px; /* Reduced padding */
     order: 2; /* Details second on mobile */
 }
 
@@ -1542,6 +1544,11 @@ button {
     object-fit: contain; /* Ensure entire image is visible */
 }
 
+.portrait-modal-layout .modal-details-content .modal-footer {
+    margin-top: 30px; /* Adjusted margin */
+    margin-left: -15px; /* Adjusted margin */
+}
+
 .portrait-modal-layout .modal-footer {
     border-top: none;
     padding-top: 0;
@@ -1551,21 +1558,21 @@ button {
 /* Responsive adjustments for the portrait modal layout */
 @media (max-width: 991px) {
     .portrait-modal-layout .modal-dialog {
-        max-width: 700px;
+        max-width: 650px; /* Reduced max-width for portrait modal on smaller screens */
     }
     .portrait-modal-layout .modal-body > .row {
         flex-direction: column; /* Stack columns on smaller screens */
     }
     .portrait-modal-layout .modal-body .col-lg-6 {
         width: 100%;
-        margin-bottom: 20px; /* Space between stacked carousel and details */
+        margin-bottom: 15px; /* Reduced space between stacked carousel and details */
     }
     .portrait-modal-layout .modal-body .carousel-container {
-        max-width: 300px; /* Maintain portrait aspect ratio */
+        max-width: 250px; /* Maintain portrait aspect ratio */
     }
     .portrait-modal-layout .modal-body .modal-details-content {
         padding-left: 0;
-        padding-top: 20px; /* Add space when stacked */
+        padding-top: 15px; /* Reduced space when stacked */
     }
     .portrait-modal-layout .modal-footer {
         justify-content: center;
@@ -1574,18 +1581,18 @@ button {
 
 @media (max-width: 767px) {
     .portrait-modal-layout .modal-dialog {
-        max-width: 90%;
+        max-width: 85%; /* Reduced max-width for portrait modal on extra small screens */
     }
     .portrait-modal-layout .modal-body .carousel-container {
-        max-width: 250px;
+        max-width: 200px; /* Further reduced max-width for portrait orientation */
     }
     .portrait-modal-layout .modal-footer {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 8px; /* Reduced gap */
     }
     .portrait-modal-layout .modal-footer .btn {
-        width: 80%;
+        width: 90%; /* Increased button width to fill more space */
     }
 }
 
