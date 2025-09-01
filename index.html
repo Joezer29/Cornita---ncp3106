@@ -431,7 +431,7 @@
     </div>
 
     <!-- Modal 3: Hi-Lo Game -->
-    <div class="modal fade portfolio-modal" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3Label" aria-hidden="true">
+    <div class="modal fade portfolio-modal portrait-modal-layout" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3Label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -439,71 +439,75 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <!-- Carousel for Hi-Lo Game -->
-                    <div id="carouselHiLo" class="carousel slide modal-carousel mb-5" data-bs-ride="carousel" data-bs-interval="5000">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselHiLo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselHiLo" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselHiLo" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#carouselHiLo" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <div class="row">
+                        <div class="col-lg-6 carousel-container">
+                            <!-- Carousel for Hi-Lo Game -->
+                            <div id="carouselHiLo" class="carousel slide modal-carousel mb-4" data-bs-ride="carousel" data-bs-interval="5000">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselHiLo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselHiLo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselHiLo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#carouselHiLo" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/project/hi-lo1-main.png" class="d-block w-100 modal-carousel-img" alt="Hi-Lo Game Start">
+                                        <div class="carousel-caption">
+                                            <h6>Game Start Screen</h6>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/project/hi-lo2.png" class="d-block w-100 modal-carousel-img" alt="Hi-Lo Gameplay">
+                                        <div class="carousel-caption">
+                                            <h6>Active Gameplay</h6>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/project/hi-lo3.png" class="d-block w-100 modal-carousel-img" alt="Hi-Lo Game End">
+                                        <div class="carousel-caption">
+                                            <h6>Game Results</h6>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/project/hi-lo4.png" class="d-block w-100 modal-carousel-img" alt="Hi-Lo Game End">
+                                        <div class="carousel-caption">
+                                            <h6>Game Results</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselHiLo" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselHiLo" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
                         </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="images/project/hi-lo1-main.png" class="d-block w-100 modal-carousel-img" alt="Hi-Lo Game Start">
-                                <div class="carousel-caption">
-                                    <h6>Game Start Screen</h6>
-                                </div>
+                        <div class="col-lg-6 modal-details-content">
+                            <h6>Project Overview</h6>
+                            <p>An Object-Oriented Programming activity demonstrating core OOP concepts through an interactive Hi-Lo guessing game. Players must guess whether the next number will be higher or lower than the current one, with score tracking and multiple difficulty levels.</p>
+                            <h6>Technologies Used</h6>
+                            <div class="tech-stack">
+                                <span class="tech-tag python">Java</span>
+                                <span class="tech-tag oop">OOP</span>
+                                <span class="tech-tag classes">Classes</span>
+                                <span class="tech-tag inheritance">Inheritance</span>
                             </div>
-                            <div class="carousel-item">
-                                <img src="images/project/hi-lo2.png" class="d-block w-100 modal-carousel-img" alt="Hi-Lo Gameplay">
-                                <div class="carousel-caption">
-                                    <h6>Active Gameplay</h6>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/project/hi-lo3.png" class="d-block w-100 modal-carousel-img" alt="Hi-Lo Game End">
-                                <div class="carousel-caption">
-                                    <h6>Game Results</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/project/hi-lo4.png" class="d-block w-100 modal-carousel-img" alt="Hi-Lo Game End">
-                            <div class="carousel-caption">
-                                <h6>Game Results</h6>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <a href="#" class="btn btn-primary">View Live</a>
                             </div>
                         </div>
                     </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHiLo" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselHiLo" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    
-                    <h6>Project Overview</h6>
-                    <p>An Object-Oriented Programming activity demonstrating core OOP concepts through an interactive Hi-Lo guessing game. Players must guess whether the next number will be higher or lower than the current one, with score tracking and multiple difficulty levels.</p>
-                    <h6>Technologies Used</h6>
-                    <div class="tech-stack">
-                        <span class="tech-tag python">Java</span>
-                        <span class="tech-tag oop">OOP</span>
-                        <span class="tech-tag classes">Classes</span>
-                        <span class="tech-tag inheritance">Inheritance</span>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <a href="#" class="btn btn-primary">View Live</a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Modal 4: Lucky Diamond -->
-    <div class="modal fade portfolio-modal" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+    <div class="modal fade portfolio-modal portrait-modal-layout" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4Label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -511,56 +515,103 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <!-- Carousel for Lucky Diamond -->
-                    <div id="carouselLuckyDiamond" class="carousel slide modal-carousel mb-4" data-bs-ride="carousel" data-bs-interval="5000">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselLuckyDiamond" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselLuckyDiamond" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselLuckyDiamond" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <div class="row">
+                        <div class="col-lg-6 carousel-container">
+                            <!-- Carousel for Lucky Diamond -->
+                            <div id="carouselLuckyDiamond" class="carousel slide modal-carousel mb-4" data-bs-ride="carousel" data-bs-interval="5000">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselLuckyDiamond" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselLuckyDiamond" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselLuckyDiamond" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#carouselLuckyDiamond" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                    <button type="button" data-bs-target="#carouselLuckyDiamond" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                    <button type="button" data-bs-target="#carouselLuckyDiamond" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                    <button type="button" data-bs-target="#carouselLuckyDiamond" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                                    <button type="button" data-bs-target="#carouselLuckyDiamond" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                                    <button type="button" data-bs-target="#carouselLuckyDiamond" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/project/lucky-main.png" class="d-block w-100 modal-carousel-img" alt="Lucky Diamond Main">
+                                        <div class="carousel-caption">
+                                            <h6>Main Interface</h6>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/project/lucky-2.png" class="d-block w-100 modal-carousel-img" alt="Lucky Diamond Gameplay">
+                                        <div class="carousel-caption">
+                                            <h6>Active Game</h6>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/project/lucky-3.png" class="d-block w-100 modal-carousel-img" alt="Lucky Diamond Win">
+                                        <div class="carousel-caption">
+                                            <h6>Win Screen</h6>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/project/lucky-4.png" class="d-block w-100 modal-carousel-img" alt="Lucky Diamond Win">
+                                        <div class="carousel-caption">
+                                            <h6>Win Screen</h6>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/project/lucky-5.png" class="d-block w-100 modal-carousel-img" alt="Lucky Diamond Win">
+                                        <div class="carousel-caption">
+                                            <h6>Win Screen</h6>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/project/lucky-6.png" class="d-block w-100 modal-carousel-img" alt="Lucky Diamond Win">
+                                        <div class="carousel-caption">
+                                            <h6>Win Screen</h6>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/project/lucky-7.png" class="d-block w-100 modal-carousel-img" alt="Lucky Diamond Win">
+                                        <div class="carousel-caption">
+                                            <h6>Win Screen</h6>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/project/lucky-8.png" class="d-block w-100 modal-carousel-img" alt="Lucky Diamond Win">
+                                        <div class="carousel-caption">
+                                            <h6>Win Screen</h6>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/project/lucky-9.png" class="d-block w-100 modal-carousel-img" alt="Lucky Diamond Win">
+                                        <div class="carousel-caption">
+                                            <h6>Win Screen</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselLuckyDiamond" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselLuckyDiamond" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
                         </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="images/project/lucky-1.png" class="d-block w-100 modal-carousel-img" alt="Lucky Diamond Main">
-                                <div class="carousel-caption">
-                                    <h6>Main Interface</h6>
-                                </div>
+                        <div class="col-lg-6 modal-details-content">
+                            <h6>Project Overview</h6>
+                            <p>A casino-style application development project featuring the Lucky Diamond game. This application demonstrates modern UI/UX design principles with engaging animations, sound effects, and a comprehensive scoring system. The game provides an immersive experience with realistic casino game mechanics.</p>
+                            <h6>Technologies Used</h6>
+                            <div class="tech-stack">
+                                <span class="tech-tag java">Java</span>
+                                <span class="tech-tag javafx">CSS</span>
+                                <span class="tech-tag css">Kotlin</span>
+                                <span class="tech-tag game" data-tag="Game Logic">Game Logic</span>
                             </div>
-                            <div class="carousel-item">
-                                <img src="images/project/lucky-1.png" class="d-block w-100 modal-carousel-img" alt="Lucky Diamond Gameplay">
-                                <div class="carousel-caption">
-                                    <h6>Active Game</h6>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/project/lucky-1.png" class="d-block w-100 modal-carousel-img" alt="Lucky Diamond Win">
-                                <div class="carousel-caption">
-                                    <h6>Win Screen</h6>
-                                </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <a href="#" class="btn btn-primary">View Live</a>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselLuckyDiamond" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselLuckyDiamond" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
                     </div>
-                    
-                    <h6>Project Overview</h6>
-                    <p>A casino-style application development project featuring the Lucky Diamond game. This application demonstrates modern UI/UX design principles with engaging animations, sound effects, and a comprehensive scoring system. The game provides an immersive experience with realistic casino game mechanics.</p>
-                    <h6>Technologies Used</h6>
-                    <div class="tech-stack">
-                        <span class="tech-tag java">Java</span>
-                        <span class="tech-tag javafx">CSS</span>
-                        <span class="tech-tag css">Kotlin</span>
-                        <span class="tech-tag game" data-tag="Game Logic">Game Logic</span>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <a href="#" class="btn btn-primary">View Live</a>
                 </div>
             </div>
         </div>
